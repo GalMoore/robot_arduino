@@ -5,7 +5,8 @@ import time
 from std_msgs.msg import String
 import rospy
 
-arduino = serial.Serial('/dev/ttyACM1', 9600)
+# ON NUC THIS IS SOMETIMES 0. ON LAPTOP IT'S 1
+arduino = serial.Serial('/dev/ttyACM0', 9600)
 
 def listener_callback(data):
 
